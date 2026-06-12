@@ -67,3 +67,13 @@ Can't multiply:
     >>> matrix_mul([[1, 2]], [[1, 2]])
     Traceback (most recent call last):
     ValueError: m_a and m_b can't be multiplied
+
+Missing one argument:
+    >>> matrix_mul([[1, 2]])
+    Traceback (most recent call last):
+    TypeError: matrix_mul() missing 1 required positional argument: 'mb'
+
+Missing two arguments:
+    >>> matrix_mul()
+    Traceback (most recent call last):
+    TypeError: matrix_mul() missing 2 required positional arguments: 'ma' and 'mb'
