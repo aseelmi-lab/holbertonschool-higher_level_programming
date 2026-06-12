@@ -32,3 +32,25 @@ Not a matrix:
     >>> matrix_divided("hello", 2)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+div is float inf:
+    >>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+Matrix with float inf:
+    >>> matrix_divided([[float('inf'), 2], [3, 4]], 2)
+    [[inf, 1.0], [1.5, 2.0]]
+
+Matrix with float nan:
+    >>> matrix_divided([[float('nan'), 2], [3, 4]], 2)
+    [[nan, 1.0], [1.5, 2.0]]
+
+Missing one argument:
+    >>> matrix_divided([[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Missing two arguments:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
