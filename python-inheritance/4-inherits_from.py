@@ -3,7 +3,7 @@
 
 
 def inherits_from(obj, a_class):
-    """Checks if an object inherits from a_class, but is not exactly it.
+    """Checks if an object inherits from a_class but is not exactly it.
 
     Args:
         obj: The object to check.
@@ -12,4 +12,4 @@ def inherits_from(obj, a_class):
     Returns:
         bool: True if obj's class inherited from a_class.
     """
-    return isinstance(obj, a_class) and type(obj) != a_class
+    return isinstance(obj, a_class) and type(obj) is not a_class
