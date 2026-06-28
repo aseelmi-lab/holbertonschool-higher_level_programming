@@ -39,6 +39,9 @@ def main():
         print_stats(total_size, status_codes)
         raise
 
+    if line_count % 10 != 0:
+        print_stats(total_size, status_codes)
+
 
 if __name__ == "__main__":
     main()
